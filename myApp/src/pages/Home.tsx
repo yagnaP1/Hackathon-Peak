@@ -8,7 +8,6 @@ import {
   IonItem,
   IonList,
   IonSelectOption,
-  IonItemDivider,
 } from "@ionic/react";
 import React, { useState } from "react";
 import ExploreContainer from "../components/ExploreContainer";
@@ -22,7 +21,7 @@ const compareWith = (o1: Cities, o2: Cities) => {
 
 const Home: React.FC = (props) => {
   const [selectedPlace, setSelectedPlace] = useState<Cities[]>([]);
-
+  // console.log(selectedPlace[0]?.name);
   return (
     <IonPage>
       <IonContent>
@@ -35,7 +34,6 @@ const Home: React.FC = (props) => {
             <IonSelect
               compareWith={compareWith}
               value={selectedPlace}
-              multiple
               onIonChange={(e) => setSelectedPlace(e.detail.value)}
             >
               {cities.map((city) => (
@@ -45,25 +43,16 @@ const Home: React.FC = (props) => {
               ))}
             </IonSelect>
           </IonItem>
-          <IonItemDivider>Selected City</IonItemDivider>
-          {selectedPlace.length ? (
-            selectedPlace.map((city) => (
-              <IonItem key={city.id}>{city.name}</IonItem>
-            ))
-          ) : (
-            <IonItem>(none selected)</IonItem>
-          )}
         </IonList>
         <IonContent>
           {cities.map((city) => (
-            {selectedPlace.name === city.name ?
-            (<iframe
+            <iframe
               key={city.id}
               title={city.name}
               src={city.url}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen={false}
-            ></iframe>) : 
+            ></iframe>
           ))}
         </IonContent>
         <ExploreContainer />

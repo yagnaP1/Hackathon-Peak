@@ -6,3 +6,11 @@
   font-family: "Shadows Into Light", cursive;
   text-align: center;
 }
+
+ion-select {
+  color: #545ca7;
+
+  --placeholder-color: #971e49;
+
+  --placeholder-opacity: 1;
+}
