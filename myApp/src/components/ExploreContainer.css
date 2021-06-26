@@ -1,4 +1,4 @@
-.container {
+/* .container {
   text-align: center;
   position: absolute;
   left: 0;
@@ -22,22 +22,33 @@
 .container a {
   text-decoration: none;
 }
-
-.videoContainer {
-  height: 295px;
-  left: 0px;
-}
-
-#video {
-  min-width: 100%;
-  min-height: 100%;
-  margin-top: 100px;
-
-  width: 812;
-  height: 375;
-
+a .video-container {
   position: absolute;
-
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
+
+ */
+
+.video-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+  margin-top: -100px;
+}
+
+/* .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
