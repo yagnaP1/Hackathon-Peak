@@ -1,4 +1,5 @@
 import {
+  IonButton,
   IonContent,
   IonHeader,
   IonItem,
@@ -11,10 +12,12 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { CitiesContext } from "../context/citiesContext/CitiesContext";
-import "./Selector.css";
 import { cities } from "../context/citiesContext/CitiesProvider";
+import { Music } from "./Music";
+import { Radio } from "./Radio";
+
 
 export const Selector = () => {
   const { selectedCity, setSelectedCity } = useContext(CitiesContext);
@@ -45,7 +48,31 @@ export const Selector = () => {
                 })}
               </IonSelect>
             </IonItem>
+            {/* Street Sound */}
+            <IonItem>
+              <IonLabel>Street Sound</IonLabel>
+              <IonButton>Mute</IonButton>
+            </IonItem>
+
+            {/* Speed */}
+            <IonItem>
+              <IonLabel>Speed</IonLabel>
+              <IonButton>1.0</IonButton>
+              <IonButton>1.5</IonButton>
+              <IonButton>2.0</IonButton>
+            </IonItem>
           </IonMenuToggle>
+
+          {/* Genra selector */}
+          <IonItem>
+            <IonLabel>Genra</IonLabel>
+            <Music />
+          </IonItem>
+
+          {/* Stations */}
+          <IonItem>
+            <Radio />
+          </IonItem>
         </IonList>
       </IonContent>
     </IonMenu>

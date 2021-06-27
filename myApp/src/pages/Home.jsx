@@ -17,7 +17,7 @@ const Home = (props) => {
             style={{
               display: "flex",
               alignItems: "center",
-              // justifyContent: "center",
+              margin: "10px",
             }}
           >
             <IonMenuButton />
@@ -27,6 +27,7 @@ const Home = (props) => {
         <div className="video-background">
           <div className="video-foreground">
             <ReactPlayer
+              controls={false}
               className="iframe"
               playing={true}
               url={cities[selectedCity]?.url}

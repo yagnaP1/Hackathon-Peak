@@ -17,6 +17,7 @@ ion-select {
 .video-background {
   background: #000;
   position: fixed;
+  width: 100%;
   top: 0px;
   right: 0;
   bottom: 0px;
@@ -33,6 +34,16 @@ ion-select {
   pointer-events: none;
 }
 
+.stationName {
+  font-family: "Shadows Into Light", cursive;
+  padding: 5px;
+  font-weight: 600;
+  color: #1a2050;
+}
+
+.selectedGenra {
+  position: absolute;
+}
 @media (min-aspect-ratio: 16/9) {
   .video-foreground {
     height: 300%;
@@ -58,4 +69,9 @@ ion-select {
   .vid-info .acronym {
     display: none;
   }
+}
+
+ion-content {
+  height: 300px;
+  margin: 20px;
 }

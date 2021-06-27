@@ -15,24 +15,27 @@ import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/typography.css";
 import { Redirect, Route } from "react-router-dom";
 import { CitiesProvider } from "./context/citiesContext/CitiesProvider";
+import { MusicProvider } from "./context/citiesContext/MusicProvide";
 import Home from "./pages/Home.jsx";
 import { Selector } from "./pages/Selector.jsx";
 
 const App: React.FC = () => (
   <CitiesProvider>
-    <IonApp>
-      <IonReactRouter>
-        <Selector />
-        <IonRouterOutlet id="main">
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/home" />
-          </Route>
-        </IonRouterOutlet>
-      </IonReactRouter>
-    </IonApp>
+    <MusicProvider>
+      <IonApp>
+        <IonReactRouter>
+          <Selector />
+          <IonRouterOutlet id="main">
+            <Route exact path="/home">
+              <Home />
+            </Route>
+            <Route exact path="/">
+              <Redirect to="/home" />
+            </Route>
+          </IonRouterOutlet>
+        </IonReactRouter>
+      </IonApp>
+    </MusicProvider>
   </CitiesProvider>
 );
 
