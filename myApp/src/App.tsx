@@ -16,25 +16,28 @@ import "@ionic/react/css/typography.css";
 import { Redirect, Route } from "react-router-dom";
 import { CitiesProvider } from "./context/citiesContext/CitiesProvider";
 import { MusicProvider } from "./context/citiesContext/MusicProvide";
+import { MuteProvider } from "./context/citiesContext/MuteProvider";
 import Home from "./pages/Home.jsx";
 import { Selector } from "./pages/Selector.jsx";
 
 const App: React.FC = () => (
   <CitiesProvider>
     <MusicProvider>
-      <IonApp>
-        <IonReactRouter>
-          <Selector />
-          <IonRouterOutlet id="main">
-            <Route exact path="/home">
-              <Home />
-            </Route>
-            <Route exact path="/">
-              <Redirect to="/home" />
-            </Route>
-          </IonRouterOutlet>
-        </IonReactRouter>
-      </IonApp>
+      <MuteProvider>
+        <IonApp>
+          <IonReactRouter>
+            <Selector />
+            <IonRouterOutlet id="main">
+              <Route exact path="/home">
+                <Home />
+              </Route>
+              <Route exact path="/">
+                <Redirect to="/home" />
+              </Route>
+            </IonRouterOutlet>
+          </IonReactRouter>
+        </IonApp>
+      </MuteProvider>
     </MusicProvider>
   </CitiesProvider>
 );

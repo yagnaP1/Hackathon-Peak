@@ -28,11 +28,11 @@ export const Music = () => {
         className="filter"
         onIonChange={(e) => setStationFilter(e.detail.value)}
       >
-        <IonSelectOption className="selectedGenra">
-          {filter.map((genra, index) => {
+        <IonSelectOption className="selectedGenre">
+          {filter.map((genre, index) => {
             return (
-              <IonSelectOption key={index} value={genra}>
-                {genra}
+              <IonSelectOption key={index} value={genre}>
+                {genre}
               </IonSelectOption>
             );
           })}

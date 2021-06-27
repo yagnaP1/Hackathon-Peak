@@ -15,12 +15,13 @@ import {
 import React, { useContext } from "react";
 import { CitiesContext } from "../context/citiesContext/CitiesContext";
 import { cities } from "../context/citiesContext/CitiesProvider";
+import { MuteContext } from "../context/citiesContext/MuteContext";
 import { Music } from "./Music";
 import { Radio } from "./Radio";
 
-
 export const Selector = () => {
   const { selectedCity, setSelectedCity } = useContext(CitiesContext);
+  const { muteState, setMuteState } = useContext(MuteContext);
 
   return (
     <IonMenu type="overlay" side="end" contentId="main-content">
@@ -51,7 +52,13 @@ export const Selector = () => {
             {/* Street Sound */}
             <IonItem>
               <IonLabel>Street Sound</IonLabel>
-              <IonButton>Mute</IonButton>
+              <IonButton
+                onClick={() => {
+                  setMuteState(!muteState);
+                }}
+              >
+                Mute
+              </IonButton>
             </IonItem>
 
             {/* Speed */}
@@ -63,9 +70,9 @@ export const Selector = () => {
             </IonItem>
           </IonMenuToggle>
 
-          {/* Genra selector */}
+          {/* Genre selector */}
           <IonItem>
-            <IonLabel>Genra</IonLabel>
+            <IonLabel>Genre</IonLabel>
             <Music />
           </IonItem>
 

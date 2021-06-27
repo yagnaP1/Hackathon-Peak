@@ -3,10 +3,13 @@ import { useContext } from "react";
 import ReactPlayer from "react-player";
 import { CitiesContext } from "../context/citiesContext/CitiesContext";
 import { cities } from "../context/citiesContext/CitiesProvider";
+import { MuteContext } from "../context/citiesContext/MuteContext";
 import "./Home.css";
 
 const Home = (props) => {
   const { selectedCity } = useContext(CitiesContext);
+  const { muteState, setMuteState } = useContext(MuteContext);
+  console.log(muteState, setMuteState);
 
   return (
     <IonPage id="main-content">
@@ -30,6 +33,9 @@ const Home = (props) => {
                     start: 200,
                     end: 3600,
                     autoplay: 1,
+                    loop: 1,
+                    rel: 0,
+                    mute: { muteState },
                   },
                 },
               }}
