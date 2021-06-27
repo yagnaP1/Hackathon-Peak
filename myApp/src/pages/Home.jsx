@@ -1,16 +1,12 @@
 import { IonContent, IonList, IonMenuButton, IonPage } from "@ionic/react";
-import React, { useState } from "react";
-import ReactPlayer from "react-player";
-import ExploreContainer, { cities } from "../components/ExploreContainer";
-import "./Home.css";
 import { useContext } from "react";
+import ReactPlayer from "react-player";
 import { CitiesContext } from "../context/citiesContext/CitiesContext";
+import { cities } from "../context/citiesContext/CitiesProvider";
+import "./Home.css";
 
 const Home = (props) => {
-  const [selectedPlace, setSelectedPlace] = useState("amsterdam");
-  // const cities: any = useContext(CitiesContext);
-
-  // cities.setSelectedPlace("amsterdam");
+  const { selectedCity } = useContext(CitiesContext);
 
   return (
     <IonPage id="main-content">
@@ -26,22 +22,6 @@ const Home = (props) => {
           >
             <IonMenuButton />
           </div>
-          {/* <IonItem>
-            <IonLabel></IonLabel>
-            <IonSelect
-              className="dropdown"
-              value={selectedPlace}
-              onIonChange={(e) => setSelectedPlace(e.detail.value)}
-            >
-              {Object.entries(cities).map(([keyName, city]) => {
-                return (
-                  <IonSelectOption key={city.id} value={keyName}>
-                    {city.name}
-                  </IonSelectOption>
-                );
-              })}
-            </IonSelect>
-          </IonItem> */}
         </IonList>
 
         <div className="video-background">
@@ -49,12 +29,11 @@ const Home = (props) => {
             <ReactPlayer
               className="iframe"
               playing={true}
-              url={cities[selectedPlace].url}
+              url={cities[selectedCity]?.url}
             />
           </div>
         </div>
       </IonContent>
-      <ExploreContainer />
     </IonPage>
   );
 };

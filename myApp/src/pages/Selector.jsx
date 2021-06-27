@@ -11,12 +11,13 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import React, { useState } from "react";
-import { cities } from "../components/ExploreContainer";
+import React, { useContext, useState } from "react";
+import { CitiesContext } from "../context/citiesContext/CitiesContext";
 import "./Selector.css";
+import { cities } from "../context/citiesContext/CitiesProvider";
 
 export const Selector = () => {
-  const [selectedPlace, setSelectedPlace] = useState("amsterdam");
+  const { selectedCity, setSelectedCity } = useContext(CitiesContext);
 
   return (
     <IonMenu type="overlay" side="end" contentId="main-content">
@@ -32,8 +33,8 @@ export const Selector = () => {
               <IonLabel>Cities</IonLabel>
               <IonSelect
                 className="dropdown"
-                value={selectedPlace}
-                onIonChange={(e) => setSelectedPlace(e.detail.value)}
+                value={selectedCity}
+                onIonChange={(e) => setSelectedCity(e.detail.value)}
               >
                 {Object.entries(cities).map(([keyName, city]) => {
                   return (
