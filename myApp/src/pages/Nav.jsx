@@ -16,8 +16,8 @@ import {
 import React, { useContext } from "react";
 import { CitiesContext } from "../context/citiesContext/CitiesContext";
 import { cities } from "../context/citiesContext/CitiesProvider";
-import { MuteContext } from "../context/citiesContext/MuteContext";
-import { PlaybackContext } from "../context/citiesContext/PlaybackContext";
+import { MuteContext } from "../context/muteContext/MuteContext";
+import { PlaybackContext } from "../context/playbackContext/PlaybackContext";
 import { Music } from "./Music";
 import { Radio } from "./Radio";
 

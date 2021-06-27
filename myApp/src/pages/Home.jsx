@@ -1,16 +1,17 @@
 import { IonContent, IonList, IonMenuButton, IonPage } from "@ionic/react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import ReactPlayer from "react-player";
 import { CitiesContext } from "../context/citiesContext/CitiesContext";
 import { cities } from "../context/citiesContext/CitiesProvider";
-import { MuteContext } from "../context/citiesContext/MuteContext";
-import { PlaybackContext } from "../context/citiesContext/PlaybackContext";
+import { MuteContext } from "../context/muteContext/MuteContext";
+import { PlaybackContext } from "../context/playbackContext/PlaybackContext";
 import "./Home.css";
 
 const Home = (props) => {
   const { selectedCity } = useContext(CitiesContext);
   const { muteState } = useContext(MuteContext);
   const { playbackRate } = useContext(PlaybackContext);
+  const [loading, setLoading] = useState(true);
 
   return (
     <IonPage id="main-content">

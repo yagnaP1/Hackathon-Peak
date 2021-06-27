@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "react-h5-audio-player/lib/styles.css";
 import { IonSelect, IonSelectOption } from "@ionic/react";
-import { MusicContext } from "../context/citiesContext/MusicContext";
+import { MusicContext } from "../context/musicContext/MusicContext";
 import "./Home.css";
 
 export const Music = () => {

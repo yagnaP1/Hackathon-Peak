@@ -15,11 +15,11 @@ import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/typography.css";
 import { Redirect, Route } from "react-router-dom";
 import { CitiesProvider } from "./context/citiesContext/CitiesProvider";
-import { MusicProvider } from "./context/citiesContext/MusicProvide";
-import { MuteProvider } from "./context/citiesContext/MuteProvider";
-import { PlaybackProvider } from "./context/citiesContext/PlaybackProvider";
+import { MusicProvider } from "./context/musicContext/MusicProvide";
+import { MuteProvider } from "./context/muteContext/MuteProvider";
+import { PlaybackProvider } from "./context/playbackContext/PlaybackProvider";
 import Home from "./pages/Home.jsx";
-import { Selector } from "./pages/Selector.jsx";
+import { Selector } from "./pages/Nav.jsx";
 
 const App: React.FC = () => (
   <CitiesProvider>
