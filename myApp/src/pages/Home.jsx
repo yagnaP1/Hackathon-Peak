@@ -1,35 +1,23 @@
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonLabel,
-  IonSelect,
-  IonItem,
-  IonSelectOption,
-  IonButton,
-  IonList,
-  IonMenuButton,
-} from "@ionic/react";
+import { IonContent, IonList, IonMenuButton, IonPage } from "@ionic/react";
 import React, { useState } from "react";
-import ExploreContainer from "../components/ExploreContainer";
-import "./Home.css";
-import { cities } from "../components/ExploreContainer";
 import ReactPlayer from "react-player";
-import { Selector } from "./Selector";
+import ExploreContainer, { cities } from "../components/ExploreContainer";
+import "./Home.css";
+import { useContext } from "react";
+import { CitiesContext } from "../context/citiesContext/CitiesContext";
 
 const Home = (props) => {
   const [selectedPlace, setSelectedPlace] = useState("amsterdam");
+  // const cities: any = useContext(CitiesContext);
+
+  // cities.setSelectedPlace("amsterdam");
 
   return (
     <IonPage id="main-content">
       <IonContent>
-        <IonHeader>
-          <IonTitle className="title">Peak</IonTitle>
-        </IonHeader>
-
         <IonList>
           <div
+            className="sidebar"
             style={{
               display: "flex",
               alignItems: "center",
@@ -37,9 +25,8 @@ const Home = (props) => {
             }}
           >
             <IonMenuButton />
-            Cities
           </div>
-          <IonItem>
+          {/* <IonItem>
             <IonLabel></IonLabel>
             <IonSelect
               className="dropdown"
@@ -54,7 +41,7 @@ const Home = (props) => {
                 );
               })}
             </IonSelect>
-          </IonItem>
+          </IonItem> */}
         </IonList>
 
         <div className="video-background">

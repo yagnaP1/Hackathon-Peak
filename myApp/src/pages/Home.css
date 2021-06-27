@@ -5,13 +5,12 @@
   font-size: 50px;
   font-family: "Shadows Into Light", cursive;
   text-align: center;
+  position: relative;
 }
 
 ion-select {
   color: #545ca7;
-
   --placeholder-color: #971e49;
-
   --placeholder-opacity: 1;
 }
 

@@ -1,4 +1,5 @@
-import "./ExploreContainer.css";
+import { useContext } from "react";
+import { CitiesContext } from "../context/citiesContext/CitiesContext";
 
 interface ContainerProps {}
 
@@ -176,7 +177,12 @@ export const cities = {
 };
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
-  return <div className="container"></div>;
+  const cities: any = useContext(CitiesContext);
+
+  // console.log(cities.setSelectedPlace("HElo"));
+  console.log(cities);
+
+  return <div></div>;
 };
 
 export default ExploreContainer;
