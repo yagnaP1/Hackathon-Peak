@@ -8,9 +8,7 @@ import "./Home.css";
 
 const Home = (props) => {
   const { selectedCity } = useContext(CitiesContext);
-  const { muteState, setMuteState } = useContext(MuteContext);
-  // console.log("muteState in home", muteState);
-  // console.log("mute:", muteState);
+  const { muteState } = useContext(MuteContext);
 
   return (
     <IonPage id="main-content">
@@ -22,13 +20,13 @@ const Home = (props) => {
         </IonList>
 
         <div className="video-background">
-          {/* {console.log(muteState, muteState ? 1 : 0, "here")} */}
           <div className="video-foreground">
             <ReactPlayer
               controls={false}
               className="iframe"
               playing={true}
               loop={true}
+              muted={muteState}
               config={{
                 youtube: {
                   playerVars: {
@@ -37,7 +35,6 @@ const Home = (props) => {
                     autoplay: 1,
                     loop: 1,
                     rel: 0,
-                    mute: !muteState ? 1 : 0,
                   },
                 },
               }}
