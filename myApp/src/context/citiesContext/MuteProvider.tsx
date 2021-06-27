@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MuteContext } from "./MuteContext";
 
 export const MuteProvider: any = ({ children }) => {
-  const [muteState, setMuteState] = useState(0);
+  const [muteState, setMuteState] = useState(false);
 
   return (
     <MuteContext.Provider

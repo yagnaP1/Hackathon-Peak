@@ -9,7 +9,8 @@ import "./Home.css";
 const Home = (props) => {
   const { selectedCity } = useContext(CitiesContext);
   const { muteState, setMuteState } = useContext(MuteContext);
-  console.log(muteState, setMuteState);
+  // console.log("muteState in home", muteState);
+  // console.log("mute:", muteState);
 
   return (
     <IonPage id="main-content">
@@ -21,6 +22,7 @@ const Home = (props) => {
         </IonList>
 
         <div className="video-background">
+          {/* {console.log(muteState, muteState ? 1 : 0, "here")} */}
           <div className="video-foreground">
             <ReactPlayer
               controls={false}
@@ -35,7 +37,7 @@ const Home = (props) => {
                     autoplay: 1,
                     loop: 1,
                     rel: 0,
-                    mute: { muteState },
+                    mute: !muteState ? 1 : 0,
                   },
                 },
               }}
