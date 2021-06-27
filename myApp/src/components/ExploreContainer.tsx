@@ -66,7 +66,7 @@ export const cities = {
   istanbul: {
     id: 13,
     name: "Istanbul",
-    url: "https://www.youtube-nocookie.com/embed/hljZphKH7e0?autoplay=1&amp;controls=0&amp;start=30;disablekb=0&amp;iv_load_policy=3",
+    url: "https://www.youtube-nocookie.com/embed/hljZphKH7e0?autoplay=1&amp;controls=0&amp;start=90;disablekb=0&amp;iv_load_policy=3",
   },
   johannesburg: {
     id: 14,
@@ -76,7 +76,7 @@ export const cities = {
   kerala: {
     id: 15,
     name: "Kerala",
-    url: "https://www.youtube-nocookie.com/embed/qYxXKneX8g4?autoplay=1&amp;controls=0;disablekb=0&amp;iv_load_policy=3",
+    url: "https://www.youtube-nocookie.com/embed/qYxXKneX8g4?autoplay=1&amp;start=60;controls=0;disablekb=0&amp;iv_load_policy=3",
   },
   kyiv: {
     id: 16,

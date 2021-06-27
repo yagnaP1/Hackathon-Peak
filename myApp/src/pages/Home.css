@@ -18,7 +18,7 @@ ion-select {
 .video-background {
   background: #000;
   position: fixed;
-  top: 0;
+  top: 0px;
   right: 0;
   bottom: 0px;
   left: 0;
@@ -52,7 +52,7 @@ ion-select {
     padding: 0.5rem;
   }
   .vid-info h1 {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.3rem;
   }
 }
 @media all and (max-width: 500px) {
