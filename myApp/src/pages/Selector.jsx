@@ -66,9 +66,9 @@ export const Selector = () => {
             {/* Speed */}
             <IonItem>
               <IonLabel>Speed</IonLabel>
-              <IonButton>1.0</IonButton>
+              <IonButton>1x</IonButton>
               <IonButton>1.5</IonButton>
-              <IonButton>2.0</IonButton>
+              <IonButton>2x</IonButton>
             </IonItem>
           </IonMenuToggle>
 
