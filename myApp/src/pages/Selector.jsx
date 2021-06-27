@@ -1,6 +1,7 @@
 import {
   IonButton,
   IonContent,
+  IonFooter,
   IonHeader,
   IonItem,
   IonLabel,
@@ -53,6 +54,7 @@ export const Selector = () => {
             <IonItem>
               <IonLabel>Street Sound</IonLabel>
               <IonButton
+                className="muteButton"
                 onClick={() => {
                   setMuteState(!muteState);
                 }}
