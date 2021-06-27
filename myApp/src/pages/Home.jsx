@@ -4,11 +4,13 @@ import ReactPlayer from "react-player";
 import { CitiesContext } from "../context/citiesContext/CitiesContext";
 import { cities } from "../context/citiesContext/CitiesProvider";
 import { MuteContext } from "../context/citiesContext/MuteContext";
+import { PlaybackContext } from "../context/citiesContext/PlaybackContext";
 import "./Home.css";
 
 const Home = (props) => {
   const { selectedCity } = useContext(CitiesContext);
   const { muteState } = useContext(MuteContext);
+  const { playbackRate } = useContext(PlaybackContext);
 
   return (
     <IonPage id="main-content">
@@ -27,6 +29,7 @@ const Home = (props) => {
               playing={true}
               loop={true}
               muted={muteState}
+              playbackRate={playbackRate}
               config={{
                 youtube: {
                   playerVars: {

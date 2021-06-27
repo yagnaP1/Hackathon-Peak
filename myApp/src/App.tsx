@@ -17,6 +17,7 @@ import { Redirect, Route } from "react-router-dom";
 import { CitiesProvider } from "./context/citiesContext/CitiesProvider";
 import { MusicProvider } from "./context/citiesContext/MusicProvide";
 import { MuteProvider } from "./context/citiesContext/MuteProvider";
+import { PlaybackProvider } from "./context/citiesContext/PlaybackProvider";
 import Home from "./pages/Home.jsx";
 import { Selector } from "./pages/Selector.jsx";
 
@@ -24,19 +25,21 @@ const App: React.FC = () => (
   <CitiesProvider>
     <MusicProvider>
       <MuteProvider>
-        <IonApp>
-          <IonReactRouter>
-            <Selector />
-            <IonRouterOutlet id="main">
-              <Route exact path="/home">
-                <Home />
-              </Route>
-              <Route exact path="/">
-                <Redirect to="/home" />
-              </Route>
-            </IonRouterOutlet>
-          </IonReactRouter>
-        </IonApp>
+        <PlaybackProvider>
+          <IonApp>
+            <IonReactRouter>
+              <Selector />
+              <IonRouterOutlet id="main">
+                <Route exact path="/home">
+                  <Home />
+                </Route>
+                <Route exact path="/">
+                  <Redirect to="/home" />
+                </Route>
+              </IonRouterOutlet>
+            </IonReactRouter>
+          </IonApp>
+        </PlaybackProvider>
       </MuteProvider>
     </MusicProvider>
   </CitiesProvider>
