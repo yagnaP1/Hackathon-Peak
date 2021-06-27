@@ -5,7 +5,7 @@ export const cities = {
   amsterdam: {
     id: 1,
     name: "Amsterdam",
-    url: " https://www.youtube-nocookie.com/embed/_nS2FvZ0h2g?autoplay=1&amp;controls=0;start=30;disablekb=0&amp;iv_load_policy=3;loop=1;modestbranding=1",
+    url: "https://www.youtube.com/embed/Oxv6IRcuNaI?controls=0",
   },
   barcelona: {
     id: 2,

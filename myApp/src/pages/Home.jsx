@@ -12,14 +12,7 @@ const Home = (props) => {
     <IonPage id="main-content">
       <IonContent>
         <IonList>
-          <div
-            className="sidebar"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              margin: "10px",
-            }}
-          >
+          <div className="sidebar">
             <IonMenuButton />
           </div>
         </IonList>
@@ -30,6 +23,16 @@ const Home = (props) => {
               controls={false}
               className="iframe"
               playing={true}
+              loop={true}
+              config={{
+                youtube: {
+                  playerVars: {
+                    start: 200,
+                    end: 3600,
+                    autoplay: 1,
+                  },
+                },
+              }}
               url={cities[selectedCity]?.url}
             />
           </div>

@@ -37,19 +37,33 @@ ion-select {
 .stationName {
   font-family: "Shadows Into Light", cursive;
   padding: 5px;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 15px;
   color: #1a2050;
 }
 
 .selectedGenra {
   position: absolute;
 }
+
+ion-content {
+  height: 300px;
+  margin: 20px;
+}
+
+.sidebar {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
 @media (min-aspect-ratio: 16/9) {
   .video-foreground {
     height: 300%;
     top: -100%;
   }
 }
+
 @media (max-aspect-ratio: 16/9) {
   .video-foreground {
     width: 300%;
@@ -69,9 +83,4 @@ ion-select {
   .vid-info .acronym {
     display: none;
   }
-}
-
-ion-content {
-  height: 300px;
-  margin: 20px;
 }
