@@ -10,7 +10,7 @@ step 2: npm install
 
 step 3: ionic serve
 
-Youtube: https://www.youtube.com/watch?v=OXslGKJoivk&t=0s&ab_channel=YagnaPatel
+Youtube: https://youtu.be/OXslGKJoivk
 
 Contact:
 LinkedIn: https://www.linkedin.com/in/yagnapatel11/
