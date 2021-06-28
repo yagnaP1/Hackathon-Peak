@@ -16,7 +16,7 @@ export const Radio = () => {
   }, [stationFilter]);
 
   const setupApi = async (stationFilter) => {
-    const api = new RadioBrowserApi(fetch.bind(window));
+    const api = new RadioBrowserApi(fetch.bind());
 
     const stations = await api
       .searchStations({

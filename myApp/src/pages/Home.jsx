@@ -11,11 +11,10 @@ const Home = (props) => {
   const { selectedCity } = useContext(CitiesContext);
   const { muteState } = useContext(MuteContext);
   const { playbackRate } = useContext(PlaybackContext);
-  const [loading, setLoading] = useState(true);
 
   return (
     <IonPage id="main-content">
-      <IonContent>
+      <IonContent >
         <IonList>
           <div className="sidebar">
             <IonMenuButton />

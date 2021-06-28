@@ -19,7 +19,7 @@ ion-select {
 
 .video-background {
   width: 1920px;
-  height: 750px;
+  height: 1250px;
   max-height: 1080px;
   position: fixed;
   pointer-events: none;
@@ -59,8 +59,11 @@ ion-content {
 .sidebar {
   display: flex;
   align-items: center;
-  padding-top: 0%;
-  position: relative;
+  margin-top: 10px;
+  /* padding-top: 10%; */
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  width: 100%;
 }
 
 @media (min-aspect-ratio: 16/9) {
