@@ -27,6 +27,7 @@ $ ionic serve
 ## Technologies 
 
  - Ionic-React Framework
+ - Typescript
  - React Hooks
  - React Player
  - RadioBrowserApi
